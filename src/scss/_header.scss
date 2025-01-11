@@ -1,0 +1,220 @@
+@import "./mixins";
+
+.header {
+  padding-top: 19px;
+  margin-bottom: 20px;
+
+  @include respond-to(768px) {
+    padding-top: 17px;
+  }
+
+  @include respond-to(1120px) {
+    display: none;
+  }
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+}
+
+
+.header__menu-logo {
+  flex: 1;
+  margin-right: 38px;
+
+  @include respond-to(375px) {
+    margin-right: 50px;
+  }
+
+  @include respond-to(481px) {
+    margin-right: 90px;
+  }
+
+  @include respond-to(601px) {
+    flex: 1;
+  }
+
+  @include respond-to(1120px) {
+    display: none;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  width: 96.55px;
+  fill: #80949F;
+  stroke: #80949F;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    fill: #6e94a8;
+    stroke: #6e94a8;
+  }
+}
+
+.header__menu-call {
+  display: none;
+  margin-right: 16px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 62, 121);
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+
+  &:hover .call {
+    fill: #3ede9e;
+  }
+
+  @include respond-to(768px) {
+    display: inline-flex;
+  }
+
+  @include respond-to(1120px) {
+    display: none;
+  }
+}
+
+.call {
+  transition: all .2s ease-in-out;
+  fill: #fff;
+}
+
+.header__menu-message {
+  display: none;
+  margin-right: 16px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 62, 121);
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+
+  &:hover .message {
+    fill: #3ede9e;
+  }
+
+  @include respond-to(768px) {
+    display: inline-flex;
+  }
+
+  @include respond-to(1120px) {
+    display: none;
+  }
+}
+
+.message {
+  transition: all .2s ease-in-out;
+  fill: #fff;
+}
+
+.header__menu-person {
+  display: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 62, 121);
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+
+  &:hover .person {
+    fill: #3ede9e;
+  }
+
+  @include respond-to(768px) {
+    display: inline-flex;
+  }
+
+  @include respond-to(1120px) {
+    display: none;
+  }
+}
+
+.person {
+  transition: all .2s ease-in-out;
+  fill: #fff;
+}
+
+.header__menu-repair {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  cursor: pointer;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  background: rgb(255, 62, 121);
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -19px;
+    height: 32px;
+    width: 2px;
+    background: rgb(234, 234, 234);
+  }
+
+  &:hover .repair {
+    fill: #3ede9e;
+  }
+
+  @include respond-to(768px) {
+    margin-left: 43px;
+    margin-right: 17px;
+  }
+
+  @include respond-to(1120px) {
+    margin-right: 0;
+    margin-left: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.repair {
+  transition: all .2s ease-in-out;
+  fill: #fff;
+}
+
+.header__menu-search {
+  cursor: pointer;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 62, 121);
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+
+  &:hover .search {
+    fill: #3ede9e;
+  }
+
+  @include respond-to(768px) {
+    margin-right: 20px;
+  }
+
+  @include respond-to(1120px) {
+    margin-right: 0;
+  }
+}
+
+.search {
+  transition: all .2s ease-in-out;
+  fill: #fff;
+}

@@ -1,10 +1,12 @@
 // main
-@import url("./_variables.scss");
-@import url("./_functions.scss");
-@import url("./_mixins.scss");
-@import url("./_global.scss");
-@import url("./_fonts.scss");
+@import 'variables';
+@import 'functions';
+@import 'mixins';
+@import 'global';
+@import 'fonts';
 
 // components
 
-@import url('./components/_base.scss');
+@import "base";
+@import "header";
+@import "content"
