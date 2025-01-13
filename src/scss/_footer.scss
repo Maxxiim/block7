@@ -1,0 +1,26 @@
+.footer {
+  padding-top: 71px;
+  background: rgb(248, 248, 248);
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 19px;
+}
+
+.footer__list-item {
+  max-width: 312px;
+  font-family: "TTM";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(126, 126, 130);
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

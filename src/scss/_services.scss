@@ -207,6 +207,14 @@
   color: rgb(27, 28, 33);
 }
 
+.swiper-slide__list-item-descr-valute {
+  margin-left: 3px;
+}
+
+.swiper-slide__list-item-descr-time {
+  margin-left: 1px;
+}
+
 .swiper-slide__title {
   display: inline-block;
   font-family: "TTM";
@@ -319,4 +327,40 @@
   color: rgb(27, 28, 33);
   line-height: 24px;
   font-weight: 500;
+}
+
+.services__offer {
+  margin-right: -16px;
+  margin-left: -16px;
+  padding-left: 16px;
+  background: rgb(248, 248, 248);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.services__offer-descr {
+  max-width: 277px;
+  font-family: "TTR";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(27, 28, 33);
+  margin-bottom: 26px;
+}
+
+
+
+.services__offer-link {
+  max-width: 220px;
+  font-family: "TTM";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(27, 28, 33);
+}
+
+.services__offer-link-text {
+  display: inline;
+  margin-right: 10px;
 }
