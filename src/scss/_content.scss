@@ -7,7 +7,13 @@
   padding-bottom: 32px;
 
   @include respond-to(768px) {
+    border-top: 1px solid rgb(217, 255, 245);
+    border-bottom: 1px solid rgb(217, 255, 245);
+    padding-top: 23px;
+    padding-bottom: 31px;
     padding-top: 18px;
+    background: rgb(255, 255, 255);
+
   }
 
   @include respond-to(1120px) {

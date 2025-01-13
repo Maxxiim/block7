@@ -2,12 +2,20 @@
 
 .services {}
 
+.swiper-price {
+  @include respond-to(768px) {
+    display: none;
+  }
+}
+
 .swiper {
   background: rgb(248, 248, 248);
   margin-left: -16px;
   margin-right: -16px;
 
   @include respond-to(768px) {
+    background: #fff;
+    border-bottom: 1px solid #D9FFF5;
     // height: 100vh;
   }
 
@@ -26,11 +34,13 @@
   line-height: 24px;
   font-weight: 400;
   color: rgb(126, 126, 130);
-  max-width: 288px;
   padding-bottom: 16px;
 
   @include respond-to(768px) {
-    max-width: 380px;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    background: linear-gradient(90deg, rgb(248, 248, 248) 80%, rgb(248, 248, 248));
   }
 }
 
@@ -264,6 +274,18 @@
   border-radius: 16px;
 }
 
+.swiper-slide__btn-pricelist {
+  display: flex;
+  border: none;
+  text-align: center;
+  background: rgb(255, 62, 121);
+  align-items: center;
+  height: auto;
+  padding: 4px 12px;
+  width: 119px;
+  border-radius: 16px;
+}
+
 .swiper-slide__btn-text {
   margin-right: 17px;
   text-transform: uppercase;
@@ -307,6 +329,7 @@
     display: flex;
     align-items: center;
     margin-left: 16px;
+    padding-bottom: 31px;
   }
 }
 
@@ -337,6 +360,10 @@
   display: flex;
   flex-direction: column;
   text-align: left;
+
+  @include respond-to(768px) {
+    background: #FFFFFF;
+  }
 }
 
 .services__offer-descr {
@@ -345,8 +372,12 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: rgb(27, 28, 33);
+  color: #1B1C21;
   margin-bottom: 26px;
+
+  @include respond-to(768px) {
+    max-width: 421px;
+  }
 }
 
 
@@ -358,9 +389,99 @@
   font-size: 16px;
   line-height: 24px;
   color: rgb(27, 28, 33);
+
+  @include respond-to(768px) {
+    max-width: 100%;
+  }
 }
 
 .services__offer-link-text {
   display: inline;
   margin-right: 10px;
+}
+
+
+// services pricelist
+
+.services__pricelist {
+  display: none;
+
+  @include respond-to(768px) {
+    display: block;
+    padding-top: 31px;
+    margin-bottom: 47px;
+  }
+}
+
+.services__pricelist-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.services__pricelist-top-item {
+  font-family: "TTM";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #7E7E82;
+}
+
+.services__pricelist-top-item-offer {
+  margin-right: 24px;
+  width: 348px;
+}
+
+.services__pricelist-top-item-price {
+  margin-right: 22px;
+  width: 74px;
+}
+
+.services__pricelist-top-item-time {
+  width: 81px;
+  margin-right: 20px;
+}
+
+.services__pricelist-main {}
+
+.services__pricelist-main-item {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #EAEAEA;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.services__pricelist-main-item-name {
+  width: 348px;
+  max-width: 348px;
+  margin-right: 24px;
+
+  font-family: "TTR";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1B1C21;
+}
+
+.services__pricelist-main-item-price {
+  width: 74px;
+  margin-right: 22px;
+
+  font-family: "TTR";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1B1C21;
+}
+
+.services__pricelist-main-item-time {
+  margin-right: 20px;
+  width: 81px;
+
+  font-family: "TTR";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1B1C21;
 }

@@ -1,6 +1,11 @@
 .footer {
   padding-top: 71px;
   background: rgb(248, 248, 248);
+
+  @include respond-to(768px) {
+    padding-top: 47px;
+    background: #fff;
+  }
 }
 
 .footer__list {
@@ -8,7 +13,13 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  margin-bottom: 19px;
+
+  @include respond-to(768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: end;
+    justify-content: space-between;
+  }
 }
 
 .footer__list-item {
@@ -21,6 +32,24 @@
   margin-bottom: 10px;
 
   &:last-child {
-    margin-bottom: 0;
+    margin-bottom: 19px;
+  }
+
+  @include respond-to(768px) {
+    max-width: 240px;
+
+    & span {
+      display: block;
+    }
+
+    &:first-child {
+      text-align: start;
+    }
+
+    &:last-child {
+      text-align: end;
+      margin-bottom: 25px;
+    }
+
   }
 }
