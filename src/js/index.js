@@ -52,3 +52,24 @@ function showBlockBrands() {
 }
 
 btnDropDown.addEventListener('click', showBlockBrands)
+
+// =======================================
+// burger modal
+
+const btnBurger = document.getElementById('burger')
+const modalSidebar = document.getElementById('sidebar')
+const btnCloseSidebar = document.querySelector('.sidebar__menu-close')
+
+btnBurger.addEventListener('click', () => {
+    if (btnBurger) {
+        modalSidebar.classList.add('sidebar__active')
+        document.body.style.overflow = 'hidden'
+    }
+})
+
+btnCloseSidebar.addEventListener('click', () => {
+    if (btnCloseSidebar) {
+        modalSidebar.classList.remove('sidebar__active')
+        document.body.style.overflow = 'auto'
+    }
+})

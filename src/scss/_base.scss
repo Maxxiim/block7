@@ -53,8 +53,6 @@ a {
 }
 
 .wrapper {
-  // display: none;
-
   @include respond-to(1120px) {
     display: block;
     width: 100%;
