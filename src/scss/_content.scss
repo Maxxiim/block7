@@ -17,8 +17,8 @@
   }
 
   @include respond-to(1120px) {
-    height: 100vh;
     display: flex;
+    background: rgb(248, 248, 248);
     flex-direction: column;
   }
 }
@@ -65,9 +65,9 @@
 .content__btn {
   display: none;
 
-  @include respond-to(1120px) {
-    float: right;
+  @include respond-to(1440px) {
     display: inline-flex;
+    float: right;
     align-items: center;
   }
 }
@@ -193,6 +193,10 @@
     max-width: 1120px;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+  @include respond-to(1300px) {
+    max-width: 100%;
   }
 }
 

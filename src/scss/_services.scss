@@ -1,6 +1,11 @@
 @import "./mixins";
 
-.services {}
+.services {
+
+  @include respond-to(1120px) {
+    background: #F8F8F8;
+  }
+}
 
 .swiper-price {
   @include respond-to(768px) {
@@ -21,6 +26,7 @@
 
   @include respond-to(1120px) {
     height: 100%;
+    background: rgb(248, 248, 248);
   }
 }
 
@@ -104,9 +110,12 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @include respond-to(1350px) {
-    display: grid;
+  @include respond-to(1360px) {
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  @include respond-to(1440px) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -364,6 +373,10 @@
   @include respond-to(768px) {
     background: #FFFFFF;
   }
+
+  @include respond-to(1120px) {
+    background: rgb(248, 248, 248);
+  }
 }
 
 .services__offer-descr {
@@ -411,6 +424,14 @@
     padding-top: 31px;
     margin-bottom: 47px;
   }
+
+  @include respond-to(1120px) {
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    background: #fff;
+  }
+
 }
 
 .services__pricelist-top {
@@ -430,16 +451,80 @@
 .services__pricelist-top-item-offer {
   margin-right: 24px;
   width: 348px;
+
+  @include respond-to(847px) {
+    margin-right: 50px;
+  }
+
+  @include respond-to(910px) {
+    margin-right: 70px;
+  }
+
+  @include respond-to(1000px) {
+    margin-right: 100px;
+  }
+
+  @include respond-to(1100px) {
+    margin-right: 135px;
+  }
+
+  @include respond-to(1200px) {
+    margin-right: 200px;
+  }
+
+  @include respond-to(1320px) {
+    min-width: 400px;
+  }
 }
 
 .services__pricelist-top-item-price {
   margin-right: 22px;
   width: 74px;
+
+  @include respond-to(847px) {
+    margin-right: 50px;
+  }
+
+  @include respond-to(910px) {
+    margin-right: 70px;
+  }
+
+  @include respond-to(1000px) {
+    margin-right: 100px;
+  }
+
+  @include respond-to(1100px) {
+    margin-right: 125px;
+  }
+
+  @include respond-to(1200px) {
+    margin-right: 130px;
+  }
 }
 
 .services__pricelist-top-item-time {
   width: 81px;
   margin-right: 20px;
+
+  @include respond-to(847px) {
+    margin-right: 50px;
+  }
+
+  @include respond-to(910px) {
+    margin-right: 70px;
+  }
+
+  @include respond-to(1000px) {
+    margin-right: 100px;
+  }
+
+  @include respond-to(1100px) {
+    margin-right: 125px;
+  }
+
+  @include respond-to(1200px) {
+    margin-right: 200px;
+  }
 }
 
 .services__pricelist-main {}
@@ -462,6 +547,30 @@
   font-size: 14px;
   line-height: 18px;
   color: #1B1C21;
+
+  @include respond-to(847px) {
+    margin-right: 50px;
+  }
+
+  @include respond-to(910px) {
+    margin-right: 70px;
+  }
+
+  @include respond-to(1000px) {
+    margin-right: 100px;
+  }
+
+  @include respond-to(1100px) {
+    margin-right: 135px;
+  }
+
+  @include respond-to(1200px) {
+    margin-right: 200px;
+  }
+
+  @include respond-to(1320px) {
+    min-width: 400px;
+  }
 }
 
 .services__pricelist-main-item-price {
@@ -473,6 +582,26 @@
   font-size: 14px;
   line-height: 18px;
   color: #1B1C21;
+
+  @include respond-to(847px) {
+    margin-right: 50px;
+  }
+
+  @include respond-to(910px) {
+    margin-right: 70px;
+  }
+
+  @include respond-to(1000px) {
+    margin-right: 100px;
+  }
+
+  @include respond-to(1100px) {
+    margin-right: 125px;
+  }
+
+  @include respond-to(1200px) {
+    margin-right: 130px;
+  }
 }
 
 .services__pricelist-main-item-time {
@@ -484,4 +613,29 @@
   font-size: 14px;
   line-height: 18px;
   color: #1B1C21;
+
+  @include respond-to(847px) {
+    margin-right: 50px;
+  }
+
+  @include respond-to(910px) {
+    margin-right: 70px;
+  }
+
+  @include respond-to(1000px) {
+    margin-right: 100px;
+  }
+
+  @include respond-to(1100px) {
+    margin-right: 135px;
+  }
+
+  @include respond-to(1200px) {
+    margin-right: 110px;
+  }
+
+  @include respond-to(1320px) {
+    margin-right: 0;
+    flex: 1;
+  }
 }

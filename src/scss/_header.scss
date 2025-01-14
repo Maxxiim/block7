@@ -9,6 +9,11 @@
   }
 
   @include respond-to(1120px) {
+    background-color: #F8F8F8;
+    margin-bottom: 0;
+  }
+
+  @include respond-to(1440px) {
     display: none;
   }
 }
@@ -35,7 +40,7 @@
     flex: 1;
   }
 
-  @include respond-to(1120px) {
+  @include respond-to(1440px) {
     display: none;
   }
 }
@@ -73,7 +78,7 @@
     display: inline-flex;
   }
 
-  @include respond-to(1120px) {
+  @include respond-to(1440px) {
     display: none;
   }
 }
@@ -103,7 +108,7 @@
     display: inline-flex;
   }
 
-  @include respond-to(1120px) {
+  @include respond-to(1440px) {
     display: none;
   }
 }
@@ -132,7 +137,7 @@
     display: inline-flex;
   }
 
-  @include respond-to(1120px) {
+  @include respond-to(1440px) {
     display: none;
   }
 }
@@ -175,7 +180,7 @@
     margin-right: 17px;
   }
 
-  @include respond-to(1120px) {
+  @include respond-to(1440px) {
     margin-right: 0;
     margin-left: 0;
 
@@ -209,7 +214,7 @@
     margin-right: 20px;
   }
 
-  @include respond-to(1120px) {
+  @include respond-to(1440px) {
     margin-right: 0;
   }
 }

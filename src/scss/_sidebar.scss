@@ -1,0 +1,302 @@
+@import "mixins";
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+// Шрифт для номера телефона в footer
+
+.sidebar {
+  width: 320px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow:
+    16px 0 52px 0 rgba(14, 24, 80, 0.2),
+    -2px 0 4px 0 rgba(69, 79, 126, 0.02);
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 17px;
+
+  @include respond-to(1440px) {
+    display: flex;
+  }
+}
+
+
+.sidebar__menu {
+  display: flex;
+  margin-bottom: 46px;
+
+  @include respond-to(1140px) {
+    justify-content: space-between;
+  }
+}
+
+.sidebar__menu-close {
+  margin-right: 16px;
+  cursor: pointer;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 62, 121);
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+
+  &:hover .close {
+    fill: #3ede9e;
+  }
+
+  @include respond-to(1440px) {
+    display: none;
+  }
+}
+
+.close {
+  fill: #fff;
+  transition: all .2s ease-in-out;
+}
+
+
+.sidebar__menu-logo {
+  margin-right: 78px;
+
+  @include respond-to(320px) {
+    margin-left: 16px;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  width: 96.55px;
+  fill: #80949F;
+  stroke: #80949F;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    fill: #6a95ad;
+    stroke: #6a95ad;
+  }
+}
+
+.sidebar__menu-repair {
+  cursor: pointer;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 62, 121);
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+
+
+  &:hover .repair {
+    fill: #3ede9e;
+  }
+
+}
+
+.repair {
+  transition: all .2s ease-in-out;
+  fill: #fff;
+}
+
+.sidebar__menu-search {
+  cursor: pointer;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 62, 121);
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+
+  &:hover .search {
+    fill: #3ede9e;
+  }
+}
+
+.search {
+  transition: all .2s ease-in-out;
+  fill: #fff;
+}
+
+.sidebar__nav {
+  // margin-bottom: 265px;
+}
+
+.sidebar__nav-list {}
+
+.sidebar__nav-list-item {
+  font-family: "TTM";
+  font-weight: 500;
+  color: #1B1C21;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 240px;
+  margin-bottom: 32px;
+  position: relative;
+  margin-left: -15px;
+  padding-left: 15px;
+  transition: all 0.15s ease-in;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 0 4px 4px 0;
+    top: 0;
+    left: 0;
+    background: rgb(65, 246, 215);
+    height: 100%;
+    width: 4px;
+    opacity: 0;
+    transition: opacity 0.15s ease-in, background-color 0.15s ease-in;
+  }
+
+  &:hover {
+    color: rgb(126, 126, 130);
+  }
+
+  &:hover::before {
+    opacity: 1;
+    background: rgb(45, 200, 160);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sidebar__footer {}
+
+.sidebar__footer-menu {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.sidebar__footer-phone {
+  width: 18px;
+  cursor: pointer;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 62, 121);
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+
+
+  &:hover .phone {
+    fill: #3ede9e;
+  }
+}
+
+.phone {
+  transition: all .2s ease-in-out;
+  fill: #fff;
+}
+
+.sidebar__footer-message {
+  width: 20px;
+  cursor: pointer;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 62, 121);
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+
+  &:hover .message {
+    fill: #3ede9e;
+  }
+}
+
+.message {
+  transition: all .2s ease-in-out;
+  fill: #fff;
+
+}
+
+.sidebar__footer-contact {
+  width: 20px;
+  cursor: pointer;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 62, 121);
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+
+
+  &:hover .contact {
+    fill: #3ede9e;
+  }
+}
+
+.contact {
+  transition: all .2s ease-in-out;
+  fill: #fff;
+}
+
+.sidebar__footer-email {
+  max-width: 160px;
+  color: rgb(27, 28, 33);
+  transition: all .2s ease-in-out;
+  margin-bottom: 12px;
+
+  &:hover {
+    color: #3ede9e;
+  }
+}
+
+.sidebar__footer-call {
+  font-family: 'Russo One', sans-serif;
+
+  font-weight: 700;
+  margin-bottom: 45px;
+  max-width: 220px;
+  font-size: 24px;
+  line-height: 32px;
+  color: rgb(27, 28, 33);
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: #3ede9e;
+  }
+}
+
+
+.sidebar__footer-lang {
+  display: flex;
+}
+
+.sidebar__footer-lang-item {
+  text-transform: uppercase;
+  cursor: pointer;
+  color: rgb(27, 28, 33);
+  margin-right: 7px;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: #3ede9e;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.sidebar__footer-lang-item_active {
+  color: rgb(126, 126, 130);
+
+  &:hover {
+    color: rgb(126, 126, 130);
+  }
+}

@@ -6,6 +6,10 @@
     padding-top: 47px;
     background: #fff;
   }
+
+  @include respond-to(1120px) {
+    background: rgb(248, 248, 248);
+  }
 }
 
 .footer__list {
