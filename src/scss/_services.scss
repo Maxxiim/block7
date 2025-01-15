@@ -21,7 +21,6 @@
   @include respond-to(768px) {
     background: #fff;
     border-bottom: 1px solid #D9FFF5;
-    // height: 100vh;
   }
 
   @include respond-to(1120px) {
@@ -31,7 +30,6 @@
 }
 
 .services__title {
-  // padding-left: 16px;
   padding-top: 16px;
   background: #fff;
   text-transform: uppercase;
@@ -39,14 +37,15 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: rgb(126, 126, 130);
+  color: var(--main-title-color);
   padding-bottom: 16px;
 
   @include respond-to(768px) {
     margin-left: -16px;
     margin-right: -16px;
     padding-left: 16px;
-    background: linear-gradient(90deg, rgb(248, 248, 248) 80%, rgb(248, 248, 248));
+
+    background: linear-gradient(90deg, rgb(248, 248, 248) 50%, #fff);
   }
 }
 
@@ -110,9 +109,6 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @include respond-to(1360px) {
-    grid-template-columns: repeat(5, 1fr);
-  }
 
   @include respond-to(1440px) {
     grid-template-columns: repeat(4, 1fr);
@@ -214,7 +210,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  color: rgb(126, 126, 130);
+  color: var(--main-title-color);
 }
 
 .swiper-slide__list-item-descr {
@@ -240,7 +236,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: rgb(27, 28, 33);
+  color: var(--main-text-color);
 }
 
 .swiper-slide__btn {
@@ -251,7 +247,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  border: 2px solid rgb(255, 62, 121);
+  border: 2px solid var(--main-color);
   border-radius: 50%;
   transition: all .2s ease-in-out;
 
@@ -274,7 +270,7 @@
   display: flex;
   border: none;
   text-align: center;
-  background: rgb(255, 62, 121);
+  background: var(--main-color);
   align-items: center;
   height: auto;
   padding: 4px 12px;
@@ -283,15 +279,21 @@
 }
 
 .swiper-slide__btn-pricelist {
+  cursor: pointer;
   display: flex;
   border: none;
   text-align: center;
-  background: rgb(255, 62, 121);
+  background: var(--main-color);
   align-items: center;
   height: auto;
   padding: 4px 12px;
   width: 119px;
   border-radius: 16px;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background: rgb(231, 61, 112);
+  }
 }
 
 .swiper-slide__btn-text {
@@ -358,6 +360,11 @@
   color: rgb(27, 28, 33);
   line-height: 24px;
   font-weight: 500;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: #FF3E79;
+  }
 }
 
 .services__offer {
@@ -395,12 +402,18 @@
 
 
 .services__offer-link {
+  display: inline-block;
   max-width: 220px;
   font-family: "TTM";
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: rgb(27, 28, 33);
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: rgb(255, 62, 121);
+  }
 
   @include respond-to(768px) {
     max-width: 100%;

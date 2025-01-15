@@ -57,3 +57,11 @@
 
   }
 }
+
+.footer__list-item-link {
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: #e46289;
+  }
+}

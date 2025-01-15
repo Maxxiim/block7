@@ -32,6 +32,7 @@
   font-weight: 700;
   font-size: 28px;
   line-height: 40px;
+  color: var(--main-title-color);
   color: rgb(27, 28, 33);
 
   transition: all 0.15s ease-in;
@@ -103,7 +104,7 @@
     margin-right: 8px;
     font-size: 16px;
     line-height: 24px;
-    color: rgb(27, 28, 33);
+    color: var(--main-text-color);
     font-weight: 500;
   }
 }
@@ -124,7 +125,7 @@
   height: 40px;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 62, 121);
+  background: var(--main-color);
   border-radius: 50%;
   transition: all .2s ease-in-out;
 
@@ -212,7 +213,7 @@
   transition: border .3s, color .3s, background-color .3s;
   line-height: 24px;
   font-size: 16px;
-  color: rgb(126, 126, 130);
+  color: var(--main-title-color);
 
   &:hover {
     color: #ff3e79;
@@ -311,7 +312,7 @@
   max-width: 312px;
   font-size: 14px;
   line-height: 18px;
-  color: rgb(27, 28, 33);
+  color: var(--main-text-color);
 
   @include respond-to(415px) {
     max-width: 310px;
@@ -344,23 +345,36 @@
     max-width: 300px;
   }
 
-  @include respond-to(1120px) {
-    max-width: 487px;
-    display: block;
-    overflow: visible;
-    height: auto;
-    margin-bottom: 12px;
-  }
+  // @include respond-to(1120px) {
+  //   max-width: 487px;
+  //   display: block;
+  //   overflow: visible;
+  //   height: auto;
+  //   margin-bottom: 12px;
+  // }
+}
+
+.content__descr__hidden-active {
+  height: 140px;
+  display: block;
 }
 
 .content__descr-more {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: rgb(27, 28, 33);
+  color: var(--main-text-color);
   display: inline-flex;
   align-items: center;
   margin-bottom: 16px;
+
+  &:hover {
+    color: var(--main-color);
+  }
+
+  @include respond-to(1120px) {
+    cursor: pointer;
+  }
 }
 
 .content__descr-more-svg {

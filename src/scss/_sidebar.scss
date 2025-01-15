@@ -34,9 +34,9 @@
   padding-top: 17px;
   background: #FFFFFF;
 
-  @include respond-to(360px) {
-    width: 306px;
-  }
+  // @include respond-to(360px) {
+  //   width: 306px;
+  // }
 }
 
 .sidebar__menu {
@@ -56,7 +56,7 @@
   height: 40px;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 62, 121);
+  background: var(--main-color);
   border-radius: 50%;
   transition: all .3s ease-in-out;
 
@@ -103,7 +103,8 @@
   height: 40px;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 62, 121);
+  background: var(--main-color);
+
   border-radius: 50%;
   transition: all .2s ease-in-out;
 
@@ -126,7 +127,8 @@
   height: 40px;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 62, 121);
+  background: var(--main-color);
+
   border-radius: 50%;
   transition: all .2s ease-in-out;
 
@@ -149,7 +151,7 @@
 .sidebar__nav-list-item {
   font-family: "TTM";
   font-weight: 500;
-  color: #1B1C21;
+  color: var(--main-text-color);
   font-size: 16px;
   line-height: 24px;
   max-width: 240px;
@@ -202,7 +204,8 @@
   height: 40px;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 62, 121);
+  background: var(--main-color);
+
   border-radius: 50%;
   transition: all .2s ease-in-out;
 
@@ -225,7 +228,8 @@
   height: 40px;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 62, 121);
+  background: var(--main-color);
+
   border-radius: 50%;
   transition: all .2s ease-in-out;
 
@@ -248,7 +252,8 @@
   height: 40px;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 62, 121);
+  background: var(--main-color);
+
   border-radius: 50%;
   transition: all .2s ease-in-out;
 
@@ -265,7 +270,7 @@
 
 .sidebar__footer-email {
   max-width: 160px;
-  color: rgb(27, 28, 33);
+  color: var(--main-text-color);
   transition: all .2s ease-in-out;
   margin-bottom: 12px;
 
@@ -282,7 +287,7 @@
   max-width: 220px;
   font-size: 24px;
   line-height: 32px;
-  color: rgb(27, 28, 33);
+  color: var(--main-text-color);
   transition: all .2s ease-in-out;
 
   &:hover {

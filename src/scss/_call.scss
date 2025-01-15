@@ -1,11 +1,11 @@
 @import "mixins";
 
-.call {
+.feedbackcall {
   display: none;
 }
 
-.call__active {
-  position: relative;
+.feedback-call__active {
+  display: block;
   position: fixed;
   width: 100%;
   height: 100%;

@@ -5,6 +5,7 @@
 }
 
 .feedback__active {
+  display: block;
   position: relative;
   position: fixed;
   width: 100%;
@@ -55,7 +56,7 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  color: #1B1C21;
+  --main-text-color: #1B1C21;
 
   &::before {
     content: "";
@@ -141,7 +142,7 @@
   line-height: 16px;
   font-family: "TTM";
   font-weight: 500;
-  color: #7E7E82;
+  --main-title-color: #7E7E82;
 
   @include respond-to(440px) {
     max-width: 376px;
@@ -150,7 +151,7 @@
 
 .feedback__content-form-data,
 .feedback__content-form-privacy {
-  color: #FF3E79;
+  color: var(--main-color);
   transition: all .1s ease-in-out;
 
   &:hover {
@@ -165,7 +166,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #FF3E79;
+  background: var(--main-color);
   border-radius: 16px;
   padding: 8px;
 
