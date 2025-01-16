@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 // =======================================
+// dropdown brand
 const btnDropDown = document.querySelector('.services__dropdown')
 const dropDownText = document.querySelector('.services__dropdown-text')
 const imgDropDown = document.querySelector('.services__dropdown-svg')
@@ -45,6 +46,7 @@ const carouselList = document.querySelector('.swiper-wrapper')
 function showBlockBrands() {
     if (dropDownText.innerText === 'Показать все') {
         dropDownText.innerText = 'Скрыть'
+        console.log('test')
     } else dropDownText.innerText = 'Показать все'
 
     imgDropDown.classList.toggle('services__dropdown-svg__active')
@@ -52,6 +54,23 @@ function showBlockBrands() {
 }
 
 btnDropDown.addEventListener('click', showBlockBrands)
+
+// =======================================
+// dropdown techniq
+
+const btnDropDownTechniq = document.getElementById('btnTechniq')
+const dropDownTextTechniq = document.getElementById('techniqText')
+const imgDropdownTechniq = document.getElementById('imgSvgTechniq')
+const carouselListTechniq = document.querySelector('.swiper-wrapper__techniq')
+
+btnDropDownTechniq.addEventListener('click', () => {
+    if (dropDownTextTechniq.innerText === 'Показать все') {
+        dropDownTextTechniq.innerText = 'Скрыть'
+    } else dropDownTextTechniq.innerText = 'Показать все'
+
+    imgDropdownTechniq.classList.toggle('services__dropdown-svg__active')
+    carouselListTechniq.classList.toggle('swiper-wrapper__techniq-active')
+})
 
 // =======================================
 // burger modal
@@ -112,3 +131,20 @@ btnFeedblackClose.addEventListener('click', () => {
 
 // =======================================
 // dropdown text
+
+const dropdownTextBtn = document.querySelector('.content__descr-more')
+const dropdownText = document.querySelector('.content__descr-more-text')
+const hiddenText = document.querySelector('.content__descr__hidden')
+const dropDownTextHidden = document.querySelector('.content__descr-text-more')
+
+function showContentText() {
+    console.log(dropdownText)
+    if (dropdownText.innerText === 'Читать далее') {
+        dropdownText.innerText = 'Cкрыть'
+    } else dropdownText.innerText = 'Читать далее'
+
+    hiddenText.classList.toggle('content__descr__hidden-active')
+    dropDownTextHidden.classList.toggle('content__descr-text-more__active')
+}
+
+dropdownTextBtn.addEventListener('click', showContentText)

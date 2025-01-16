@@ -121,6 +121,10 @@
   }
 }
 
+.swiper-wrapper__techniq-active {
+  @include respond-to(768px) {}
+}
+
 .swiper-wrapper__active {
   height: 100%;
   overflow: visible;
