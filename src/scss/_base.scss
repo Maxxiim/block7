@@ -26,7 +26,10 @@ body {
   font-weight: 400;
 
   @include respond-to(1440px) {
+    width: 100%;
     display: flex;
+    justify-content: center;
+
   }
 }
 
@@ -41,6 +44,13 @@ a {
   text-decoration: none;
 }
 
+.main {
+
+  @include respond-to(1130px) {
+    display: flex;
+  }
+}
+
 .container {
   max-width: 1148px;
   margin: 0 auto;
@@ -49,13 +59,6 @@ a {
 
   @include respond-to(320px) {
     padding: 0 16px;
-  }
-}
-
-.wrapper {
-  @include respond-to(1120px) {
-    display: block;
-    width: 100%;
   }
 }
 

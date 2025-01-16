@@ -45,8 +45,8 @@ const carouselList = document.querySelector('.swiper-wrapper')
 
 function showBlockBrands() {
     if (dropDownText.innerText === 'Показать все') {
+        imgDropDown.classList.toggle('services__dropdown-svg__active')
         dropDownText.innerText = 'Скрыть'
-        console.log('test')
     } else dropDownText.innerText = 'Показать все'
 
     imgDropDown.classList.toggle('services__dropdown-svg__active')
@@ -136,13 +136,14 @@ const dropdownTextBtn = document.querySelector('.content__descr-more')
 const dropdownText = document.querySelector('.content__descr-more-text')
 const hiddenText = document.querySelector('.content__descr__hidden')
 const dropDownTextHidden = document.querySelector('.content__descr-text-more')
+const dropdownSvgText = document.querySelector('.content__descr-more-svg')
 
 function showContentText() {
-    console.log(dropdownText)
     if (dropdownText.innerText === 'Читать далее') {
         dropdownText.innerText = 'Cкрыть'
     } else dropdownText.innerText = 'Читать далее'
 
+    dropdownSvgText.classList.toggle('content__descr-more-svg__active')
     hiddenText.classList.toggle('content__descr__hidden-active')
     dropDownTextHidden.classList.toggle('content__descr-text-more__active')
 }
