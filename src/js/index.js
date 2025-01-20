@@ -86,12 +86,28 @@ btnBurger.addEventListener('click', () => {
     }
 })
 
-btnCloseSidebar.addEventListener('click', () => {
-    if (btnCloseSidebar) {
-        modalSidebar.classList.remove('sidebar__active')
-        document.body.style.overflow = 'auto'
-    }
-})
+function closeSidebar() {
+    modalSidebar.classList.remove('sidebar__active')
+    document.body.style.overflow = 'auto'
+}
+
+if (btnCloseSidebar && modalSidebar) {
+    btnCloseSidebar.addEventListener('click', () => {
+        closeSidebar()
+    })
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeSidebar()
+        }
+
+        modalSidebar.addEventListener('click', (event) => {
+            if (event.target === modalSidebar) {
+                closeSidebar()
+            }
+        })
+    })
+}
 
 // =======================================
 // feedback modal
@@ -105,11 +121,29 @@ btnFeeedback.addEventListener('click', () => {
     document.body.style.overflow = 'hidden'
 })
 
-btnFeedbackClose.addEventListener('click', () => {
+function closeModalFeedback() {
     modalSidebar.classList.remove('sidebar__active')
     modalFeedback.classList.remove('feedback__active')
     document.body.style.overflow = 'auto'
-})
+}
+
+if (btnFeedbackClose && modalFeedback) {
+    btnFeedbackClose.addEventListener('click', () => {
+        closeModalFeedback()
+    })
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModalFeedback()
+        }
+    })
+
+    modalFeedback.addEventListener('click', (e) => {
+        if (e.target === modalFeedback) {
+            closeModalFeedback()
+        }
+    })
+}
 
 // =======================================
 // feedback-call modal
@@ -123,11 +157,29 @@ btnFeedbackCall.addEventListener('click', () => {
     document.body.style.overflow = 'hidden'
 })
 
-btnFeedblackClose.addEventListener('click', () => {
+function closeModalCall() {
     modalSidebar.classList.remove('sidebar__active')
     modalFeedbackCall.classList.remove('feedback-call__active')
     document.body.style.overflow = 'auto'
-})
+}
+
+if (btnFeedblackClose && modalFeedbackCall) {
+    btnFeedblackClose.addEventListener('click', () => {
+        closeModalCall()
+    })
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModalCall()
+        }
+    })
+
+    modalFeedbackCall.addEventListener('click', (e) => {
+        if (e.target === modalFeedbackCall) {
+            closeModalCall()
+        }
+    })
+}
 
 // =======================================
 // dropdown text
